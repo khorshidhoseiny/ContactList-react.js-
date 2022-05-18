@@ -4,38 +4,31 @@
 	box-sizing: border-box;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	text-align: center;
+	background:#1e293b;
 }
 h1 {
 	text-align: center;
 	border-bottom: 1px solid #ccc;
 	padding: 10px 0;
 	text-align: center;
+	color: yellow;
 }
 .btn {
 	display: flex;
 	justify-content: center;
 	padding: 10px 20px;
 	border-radius: 10px;
-	color: white;
-	background-color: #0084ff;
+	color: black;
+	font-weight: bold;
+	background-color: yellow;
 	outline: none;
-	width: 50px;
+	width: auto;
 	margin: auto 0;
 	border: none;
 	text-align: center;
-	margin-top: 10px;
+	margin: 10px;
 }
-.new {
-	width: auto;
-	margin: 20px auto;
-	background: rgb(34, 193, 195);
-	background: linear-gradient(
-		0deg,
-		rgba(34, 193, 195, 1) 0%,
-		rgba(253, 45, 143, 1) 100%
-	);
-	font-size: 1rem;
-}
+
 .btnDiv{
 	display: flex;
 	align-items: center;
@@ -45,9 +38,9 @@ h1 {
 	cursor: pointer;
 	margin-right: 20px;
 	background: white;
-	color: #0084ff;
+	color: #000000;
 	padding: 5px;
-	border: 1px solid #0084ff;
+	border: 2px solid yellow;
 	border-radius: 6px;
 	font-size: 1rem;
 }
@@ -64,6 +57,8 @@ a {
 	border: none;
 	cursor: pointer;
 	margin-right: 10px;
+	width: 40px;
+height: 40px;
 }
 form {
 	display: flex;
@@ -74,6 +69,10 @@ form {
 	width: 80%;
 	gap: 20px;
 }
+label{
+	color:yellow;
+	margin: 5px 0;
+}
 input {
 	width: 100%;
 	border: 1px solid #ccc;
@@ -81,6 +80,7 @@ input {
 	border-radius: 5px;
 	padding: 0.4rem;
 	text-align: left;
+	color: white;
 }
 .contact {
 	display: flex;
@@ -96,6 +96,40 @@ input {
 	display: flex;
 	align-items: center;
 }
+.contact-detail{
+	margin-top: -30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: medium;
+	flex-direction: column;
+	
+}
+.detail{
+	display: flex;
+	margin-top: 10px;
+	gap: 5rem;;
+}
+.edit-icon{
+width: 40px;
+height: 40px;
+}
+.contact-info{
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	text-align: left;
+}.contact-info p{
+	font-size: larger;
+	margin-top: 10px;
+}
+.arrow-back{
+	display: flex;
+	align-items: flex-end;
+	margin-left: 24rem;
+	margin-top: 10px;
+}
 .info-contact img {
 	width: 50px;
 	height: 50px;
@@ -103,16 +137,63 @@ input {
 }
 .data-content label {
 	font-weight: bold;
+	color: #ffff00;
+	margin-right: 5px;
+	
+}
+.img-search{
+	width: 30px;
+	height: 30px;
+
+
+}
+.search{
+	width: 30rem;
+	border: .5px solid rgba(255, 255, 0, 0.582);
+	border-radius: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding:5px;
+	color: white;
+	margin-bottom: 10px;
+}
+.contact-list{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.search input{
+	border: none;
+	outline: none;
+	color: white;
 }
 .data-content p {
-	color: #646464;
+	color: #f5efef;
 }
+p {
+font-weight: bolder;
+color: #ffff00;
+
+}
+p span{
+	font-weight: lighter;
+	padding: 0 5px;
+	color: white;
+}
+
 input:focus {
 	border-color: #0084ff67;
 }
 h3 {
 	text-align: left;
 	margin-top: 0;
+	color: #747e8d;
+	font-size: larger;
+	padding: 2px 0;
+	border-bottom: #747e8d 1px solid;
+
 }
 .name {
 	width: 100%;
@@ -122,6 +203,7 @@ h3 {
 	justify-content: center;
 	margin-bottom: 70px;
 	margin: auto;
+	
 }
 .number {
 	width: 100%;

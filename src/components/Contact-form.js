@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import AddOneContact from "../Services/AddContactServices";
 
-const ContactForm = ({ history }) => {
+const ContactForm = () => {
+	const navigate=useNavigate();
 	const [contact, setContact] = useState({ name: "", number: "" });
 	const changeHandler = (e) => {
 		setContact({ ...contact, [e.target.name]: e.target.value });
@@ -12,7 +14,7 @@ const ContactForm = ({ history }) => {
 
 		await AddOneContact(contact);
 		setContact({ name: "", number: "" });
-		history.push("/");
+		navigate("/");
 	};
 	return (
 		<>

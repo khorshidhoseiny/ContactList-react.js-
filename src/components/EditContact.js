@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
+import { useNavigate, useParams, } from "react-router-dom";
 import getContacts from "../Services/GetContactServices";
 import getOneContact from "../Services/GetOneContactService";
 import PutContact from "../Services/PutContactServices";
-const EditContact = ({ history, match }) => {
+const EditContact = () => {
+	const {id}=useParams();
+	const navigate=useNavigate();
 	useEffect(() => {
 		const localfetch = async () => {
-			const { data } = await getOneContact(match.params.id);
+			const { data } = await getOneContact(id);
 			setContact(data);
 		};
 		localfetch();
@@ -18,10 +21,10 @@ const EditContact = ({ history, match }) => {
 	
 	const submitHandler = async(e) => {
 		e.preventDefault();
-		await PutContact(contact, match.params.id);
+		await PutContact(contact,id);
 		 await getContacts();
 		setContact({ name: "", number: "" });
-		history.push("/");
+		navigate("/");
 	};
 	return (
 		<>
