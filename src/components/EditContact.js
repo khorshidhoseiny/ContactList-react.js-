@@ -30,7 +30,7 @@ const EditContact = () => {
 		<>
 			<section>
 				<form onSubmit={submitHandler} className="flex flex-col mx-auto text-left w-4/5 my-3 ">
-					<h3 className="text-left mt-0 font-bold text-slate-400 py-2 border-b border-slate-400">Add Contact</h3>
+					<h3 className="text-left mt-0 font-bold text-slate-400 py-2 border-b border-slate-400">Edit Contact</h3>
 					<div className="flex flex-col w-full items-start mb-6 m-auto">
 						<label className="font-bold text-yellow-400 my-3">Name</label>
 						<input
