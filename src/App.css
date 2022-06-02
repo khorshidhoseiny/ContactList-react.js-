@@ -6,172 +6,17 @@
 	text-align: center;
 	background:#1e293b;
 }
-h1 {
-	text-align: center;
-	border-bottom: 1px solid #ccc;
-	padding: 10px 0;
-	text-align: center;
-	color: yellow;
-}
-.btn {
-	display: flex;
-	justify-content: center;
-	padding: 10px 20px;
-	border-radius: 10px;
-	color: black;
-	font-weight: bold;
-	background-color: yellow;
-	outline: none;
-	width: auto;
-	margin: auto 0;
-	border: none;
-	text-align: center;
-	margin: 10px;
-}
 
-.btnDiv{
-	display: flex;
-	align-items: center;
-}
-.editBtn {
-	width: auto;
-	cursor: pointer;
-	margin-right: 20px;
-	background: white;
-	color: #000000;
-	padding: 5px;
-	border: 2px solid yellow;
-	border-radius: 6px;
-	font-size: 1rem;
-}
-.info-contact {
-	cursor: pointer;
-}
-a {
-	text-decoration: none;
-}
 .DeleteBtn{
 	color: red;
 	font-size: 1.4rem;
 	background: transparent;
 	border: none;
 	cursor: pointer;
-	margin-right: 10px;
-	width: 40px;
-height: 40px;
-}
-form {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: left;
-	margin: 10px 100px;
-	width: 80%;
-	gap: 20px;
-}
-label{
-	color:yellow;
-	margin: 5px 0;
-}
-input {
-	width: 100%;
-	border: 1px solid #ccc;
-	outline: none;
-	border-radius: 5px;
-	padding: 0.4rem;
-	text-align: left;
-	color: white;
-}
-.contact {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	border: 1px solid #ccc;
-	outline: none;
-	border-radius: 5px;
-	padding: 0.4rem;
-	text-align: left;
-}
-.info-contact {
-	display: flex;
-	align-items: center;
-}
-.contact-detail{
-	margin-top: -30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	font-size: medium;
-	flex-direction: column;
-	
-}
-.detail{
-	display: flex;
-	margin-top: 10px;
-	gap: 5rem;;
-}
-.edit-icon{
-width: 40px;
-height: 40px;
-}
-.contact-info{
-	display: flex;
-	align-items: flex-start;
-	flex-direction: column;
-	text-align: left;
-}.contact-info p{
-	font-size: larger;
-	margin-top: 10px;
-}
-.arrow-back{
-	display: flex;
-	align-items: flex-end;
-	margin-left: 24rem;
-	margin-top: 10px;
-}
-.info-contact img {
-	width: 50px;
-	height: 50px;
-	margin: 7px;
-}
-.data-content label {
-	font-weight: bold;
-	color: #ffff00;
-	margin-right: 5px;
-	
-}
-.img-search{
-	width: 30px;
-	height: 30px;
-
+	width: auto;
 
 }
-.search{
-	width: 30rem;
-	border: .5px solid rgba(255, 255, 0, 0.582);
-	border-radius: 1rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding:5px;
-	color: white;
-	margin-bottom: 10px;
-}
-.contact-list{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-.search input{
-	border: none;
-	outline: none;
-	color: white;
-}
-.data-content p {
-	color: #f5efef;
-}
+
 p {
 font-weight: bolder;
 color: #ffff00;
@@ -183,33 +28,4 @@ p span{
 	color: white;
 }
 
-input:focus {
-	border-color: #0084ff67;
-}
-h3 {
-	text-align: left;
-	margin-top: 0;
-	color: #747e8d;
-	font-size: larger;
-	padding: 2px 0;
-	border-bottom: #747e8d 1px solid;
 
-}
-.name {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
-	margin-bottom: 70px;
-	margin: auto;
-	
-}
-.number {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
-	margin: auto;
-}

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL="https://my-json-server.typicode.com/khorshidhoseiny/contact-list-server-api"
+axios.defaults.baseURL="http://localhost:3001/"
 
 const http ={
 get:axios.get,

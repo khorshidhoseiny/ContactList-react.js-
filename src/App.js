@@ -9,12 +9,14 @@ import EditContact from "./components/EditContact";
 function App() {
   return (
     <>
-      <div><h1>Contact-List</h1>  </div>
+      <div>
+        <h1 className="text-yellow-400 py-3 text-center border-b border-gray-400 font-bold text-2xl">Contact-List</h1>
+      </div>
       <Routes>
-        <Route path="/edit/:id" element={<EditContact/>} />
-        <Route path="/user/:id" element={<ContactDetail/>} />
-        <Route path="/add" element={<ContactForm/>} />
-        <Route path="/"  element={<ContactList/>} />
+        <Route path="/edit/:id" element={<EditContact />} />
+        <Route path="/user/:id" element={<ContactDetail />} />
+        <Route path="/add" element={<ContactForm />} />
+        <Route path="/" element={<ContactList />} />
       </Routes>
     </>
   );

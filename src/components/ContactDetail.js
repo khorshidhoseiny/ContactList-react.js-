@@ -1,20 +1,19 @@
-
 import { Link, NavLink, useLocation, useParams } from "react-router-dom";
 
-const ContactDetail = ({DeleteContactHandler}) => {
- const {id}=useParams();
-   const location = useLocation();
-   const contact = location.state?.contact;
-   const onClickHandler=(id)=>{
-DeleteContactHandler(id);
-
-   }
+const ContactDetail = ({ DeleteContactHandler }) => {
+  const { id } = useParams();
+  const location = useLocation();
+  const contact = location.state?.contact;
+  const onClickHandler = (id) => {
+    DeleteContactHandler(id);
+  };
   return (
-    <>
-      <Link to="/">
+    <div className="w-full md:w-2/4 flex relative justify-center mx-auto items-center ">
+      <div className="top-0 flex items-end justify-end bg-transparent absolute left-0">
+      <Link to="/" className="bg-transparent">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="arrow-back"
+          className=" bg-transparent mx-7  mt-5"
           width="40"
           height="40"
           viewBox="0 0 24 24"
@@ -28,7 +27,9 @@ DeleteContactHandler(id);
           <path d="M9 11l-4 4l4 4m-4 -4h11a4 4 0 0 0 0 -8h-1" />
         </svg>
       </Link>
-      <div className="contact-detail">
+      </div>
+      
+      <div className="flex justify-center items-center flex-col">
         <svg
           width="200"
           height="200"
@@ -45,33 +46,34 @@ DeleteContactHandler(id);
           />
         </svg>
 
-        <div className="detail">
-          <div className="contact-info">
-            
-            <p>Name:<span>{contact.name}</span> </p>  
-            <p> Number: <span>{contact.number}</span></p> 
+        <div className="flex m-3 gap-20 items-center justify-center">
+          <div className="flex items-start flex-col text-left gap-y-3 p-4 ">
+            <p className="text-yellow-400 font-bold ">
+              Name:<span>{contact.name}</span>
+            </p>
+            <p className="text-yellow-400 font-bold ">
+              Number:<span>{contact.number}</span>
+            </p>
           </div>
           <Link to={`/edit/${id}`}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="edit-icon"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="#ffff00"
-            strokeWidth={1}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-            />
-          </svg>
-          
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="edit-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="#ffff00"
+              strokeWidth={1}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+              />
+            </svg>
           </Link>
-          <button onClick={()=>DeleteContactHandler(id)}>Delete</button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

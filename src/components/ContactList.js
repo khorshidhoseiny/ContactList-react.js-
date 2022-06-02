@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import DeleteContact from "../Services/DeleteContactServices";
 import getContacts from "../Services/GetContactServices";
-  
+
 const ContactList = () => {
-  const params=useParams();
+  const params = useParams();
   const [contacts, setContacts] = useState(null);
   const [allContact, setAllContact] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
@@ -48,15 +48,23 @@ const ContactList = () => {
     <p>Please Add some Contacts </p>;
   }
   return (
-    <div className="contact-list">
+    <div className="flex flex-col gap-y-3 justify-center items-center ">
       <Link to="/add">
-        <button className="btn new"> Add a New...</button>
+        <button className=" px-3 py-2 bg-yellow-400 font-bold rounded-md mt-5 ">
+          {" "}
+          Add a New...
+        </button>
       </Link>
-      <div className="search">
-        <input type="text" value={searchTerm} onChange={searchHandler} />
+      <div className="flex w-3/4  md:w-2/4 justify-between py-3 px-2 gap-x-2 border border-slate-400 hover:border-yellow-400 hover:shadow-yellow-200 hover:shadow-sm rounded-md">
+        <input
+          type="text"
+          placeholder="search here..."
+          value={searchTerm}
+          onChange={searchHandler}
+          className="border-none text-sm md:text-base flex justify-left text-left outline-none"
+        />
         <svg
-          width="24"
-          height="24"
+          className=" w-6 h-6 flex justify-center items-center md:w-6 md:h-6"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -68,16 +76,21 @@ const ContactList = () => {
           />
         </svg>
       </div>
-      <form>
+      <form className="flex justify-center items-center flex-col mx-auto text-left w-4/5 my-3">
         {contacts ? (
           contacts.map((contact) => {
             const { id, name, number } = contact;
             return (
-              <div key={id} className="contact">
+              <div
+                key={id}
+                className="flex justify-between w-3/4 border gap-x-3 border-slate-400 mb-3 p-3 text-left rounded-md "
+              >
                 <Link
-                  to={{ pathname: `/user/${id}` }} state={{contact:contact}} DeleteContactHandler={DeleteContactHandler}
+                  to={{ pathname: `/user/${id}` }}
+                  state={{ contact: contact }}
+                  DeleteContactHandler={DeleteContactHandler}
                 >
-                  <div className="info-contact">
+                  <div className="flex items-center">
                     <svg
                       width="50"
                       height="50"
@@ -93,17 +106,17 @@ const ContactList = () => {
                         fill="#fff"
                       />
                     </svg>
-                    <div className="data-content">
-                      <label>{name}</label>
-                      <p>{number}</p>
+                    <div className="">
+                      <label className="font-bold text-yellow-400 flex items-end text-sm md:text-base">{name}</label>
+                      <p className="text-xs text-white md:text-base">{number}</p>
                     </div>
                   </div>
                 </Link>
-                <div className="btnDiv">
+                <div className="flex justify-center items-center">
                   <Link to={`/edit/${id}`}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="edit-icon"
+                      className="h-5 w-5 md:h-9 md:w-9"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="#ffff00"
@@ -123,7 +136,7 @@ const ContactList = () => {
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
+                      className="h-5 w-5 md:h-9 md:w-9"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
